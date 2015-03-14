@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServer2008Dialect</property>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://10.11.77.169:1433;database=DemoUpc</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password">12345678</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        
+	<mapping class="pe.edu.upc.demo.dao.entity.Producto" />     
+        <mapping class="pe.edu.upc.demo.dao.entity.Categoria" />   
+	<mapping class="pe.edu.upc.demo.dao.entity.Usuario" />   
+	<mapping class="pe.edu.upc.demo.dao.entity.Rol" />   
+	<mapping class="pe.edu.upc.demo.dao.entity.Menu" />   
+    </session-factory>
+</hibernate-configuration>
